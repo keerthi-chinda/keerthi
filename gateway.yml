@@ -1,13 +1,9 @@
 server:
   port:8091
-spring:
-  cloud:
-    gateway:
-      routes:
-      - uri: http://localhost:8080/
-        predicates:
-        - path=/employee
-      - uri: http://localhost:8081/
-        predicates:
-        - path=/employees  
-       
+  spring:
+    cloud:
+      gateway:
+        routes:
+        - uri: http://localhost:8080/**
+        - uri: http://localhost:8081/**
+         
