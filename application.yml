@@ -1,3 +1,2 @@
-name: Employee-service
 server:
   port: 8085
