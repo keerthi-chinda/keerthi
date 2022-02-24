@@ -1,11 +1,13 @@
 server:
-  port:8091
+  port: 8090
 spring:
   cloud:
     gateway:
       routes:
-      - uri: http://localhost:8085/
-        predicates:
-        - Path=/api/v1/**
-       
-         
+      - uri: http://localhost:8087/
+      predicates:
+      - Path=/emp/**
+      - uri: http://localhost:8081/
+       predicate:
+       - Path=/temp/emp**
+
