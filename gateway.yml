@@ -4,10 +4,10 @@ spring:
   cloud:
     gateway:
       routes:
-      - uri: http://localhost:8087/
+      - uri: http://localhost:8085/
       predicates:
-      - Path=/emp/**
-      - uri: http://localhost:8081/
+      - Path=/api/v1/**
+      - uri: http://localhost:8084/
        predicate:
-       - Path=/temp/emp**
+       - Path=/api/v2/**
 
